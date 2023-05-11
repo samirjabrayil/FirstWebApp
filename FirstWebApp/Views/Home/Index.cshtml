@@ -1,0 +1,19 @@
+﻿@using FirstWebApp.Models;
+@using FirstWebApp.ViewModels;
+@{
+	HomeViewModel homeViewModel = Model;
+	var students = homeViewModel.Students;
+	var universities = homeViewModel.Universities;
+}
+
+
+<h1>Student</h1>
+@foreach (var student in students){
+	<p>@student.ToString()</p>
+}
+
+<h1>University</h1>
+@foreach (var university in universities)
+{
+	<p>@university.ToString()</p>
+}
